@@ -1,4 +1,4 @@
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: allennlp-semparse
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/allenai/allennlp-semparse/archive/v{{ version }}.tar.gz
-  sha256: ffe539df692f4ae90d16a4b690b8203e596d0e2db71b8ef79dbf3614bbbcdc08
+  sha256: ec07547013729ef3b94eb61824acdd548deb73e237b2e9a2ca25f3529c7403ab
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [not linux]
+  skip: true  # [not linux]
 
 requirements:
   host:
@@ -44,7 +44,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'A framework for building semantic parsers (including neural module networks) with AllenNLP, built by the authors of AllenNLP'
+  summary: A framework for building semantic parsers (including neural module networks) with AllenNLP, built by the authors of AllenNLP
 
   doc_url: https://docs.allennlp.org/main/
   dev_url: https://github.com/allenai/allennlp-semparse
