@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python
-    - allennlp >=1.1,<2.0
+    - allennlp >=2,<3
     - editdistance
     - nltk
     - parsimonious >=0.8
