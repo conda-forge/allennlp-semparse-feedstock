@@ -9,9 +9,9 @@ source:
   sha256: ec07547013729ef3b94eb61824acdd548deb73e237b2e9a2ca25f3529c7403ab
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [not linux]
+  skip: true  # [py36 or not linux]
 
 requirements:
   host:
@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python
-    - allennlp >=1.1,<2.0
+    - allennlp >=2,<3
     - editdistance
     - nltk
     - parsimonious >=0.8
