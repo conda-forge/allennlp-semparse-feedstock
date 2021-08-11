@@ -7,11 +7,14 @@ package:
 source:
   url: https://github.com/allenai/allennlp-semparse/archive/v{{ version }}.tar.gz
   sha256: ec07547013729ef3b94eb61824acdd548deb73e237b2e9a2ca25f3529c7403ab
+  patches:
+    # carry allenai/allennlp-semparse#45 for osx support
+    - patches/0001-Fix-tests-45.patch
 
 build:
   number: 1
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py36 or not linux]
+  skip: true  # [win or py36]
 
 requirements:
   host:
