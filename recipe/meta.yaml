@@ -7,9 +7,6 @@ package:
 source:
   url: https://github.com/allenai/allennlp-semparse/archive/v{{ version }}.tar.gz
   sha256: 02ed9e5dc67e32dcc2d3f4ad196589f1f6e10379b78a1e2ac39f75ade62fa501
-  patches:
-    # carry allenai/allennlp-semparse#45 for osx support
-    - patches/0001-Fix-tests-45.patch
 
 build:
   number: 0
