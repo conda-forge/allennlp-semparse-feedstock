@@ -1,4 +1,4 @@
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: allennlp-semparse
@@ -6,13 +6,10 @@ package:
 
 source:
   url: https://github.com/allenai/allennlp-semparse/archive/v{{ version }}.tar.gz
-  sha256: ec07547013729ef3b94eb61824acdd548deb73e237b2e9a2ca25f3529c7403ab
-  patches:
-    # carry allenai/allennlp-semparse#45 for osx support
-    - patches/0001-Fix-tests-45.patch
+  sha256: 02ed9e5dc67e32dcc2d3f4ad196589f1f6e10379b78a1e2ac39f75ade62fa501
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win or py<37]
 
@@ -28,7 +25,6 @@ requirements:
     - allennlp >=2,<3
     - editdistance
     - nltk
-    - overrides ==3.1.0
     - parsimonious >=0.8
     - sqlparse >=0.2.4
     - unidecode
