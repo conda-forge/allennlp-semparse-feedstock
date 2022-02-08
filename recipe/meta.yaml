@@ -25,7 +25,6 @@ requirements:
     - allennlp >=2,<3
     - editdistance
     - nltk
-    - overrides ==3.1.0
     - parsimonious >=0.8
     - sqlparse >=0.2.4
     - unidecode
